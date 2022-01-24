@@ -30,7 +30,7 @@ function gotResults(error, result){
     else{
         console.log(result);
         document.getElementById("label").innerHTML = "Label:" + result[0].label;
-        document.getElementById("confidence").innerHTML = "Confidence:" + Math.round(result[0].confidence * 100) + + "%";
+        document.getElementById("confidence").innerHTML = "Confidence:" + Math.round(result[0].confidence * 100) + "%";
         utterThis = new SpeechSynthesisUtterance(result[0].label);
         synth.speak(utterThis);
     }
